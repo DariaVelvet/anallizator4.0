@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --background: #f3f4f6;
+  --surface: #ffffff;
+  --hover-bg: #f9fafb;
+  --border: #e5e7eb;
+  --border-light: #f0f1f3;
+  --disabled: #d1d5db;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+  --primary-light-alt: #dbeafe;
+  --primary-border: #bfdbfe;
+  --text: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --text-faint: #9ca3af;
+  --success-bg: #f0fdf4;
+  --success-bg-alt: #dcfce7;
+  --success-text: #16a34a;
+  --success-border: #bbf7d0;
+  --danger-bg: #fef2f2;
+  --danger-bg-alt: #fee2e2;
+  --danger-text: #dc2626;
+  --danger-border: #fecaca;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 40px rgba(0,0,0,0.25);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme='dark'] {
+  --background: #0d0f13;
+  --surface: #1a1d24;
+  --hover-bg: #23262e;
+  --border: #2d313a;
+  --border-light: #262932;
+  --disabled: #4b5158;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-light: rgba(59, 130, 246, 0.16);
+  --primary-light-alt: rgba(59, 130, 246, 0.24);
+  --primary-border: rgba(59, 130, 246, 0.4);
+  --text: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --text-faint: #6b7280;
+  --success-bg: rgba(22, 163, 74, 0.16);
+  --success-bg-alt: rgba(22, 163, 74, 0.24);
+  --success-text: #4ade80;
+  --success-border: rgba(74, 222, 128, 0.35);
+  --danger-bg: rgba(220, 38, 38, 0.16);
+  --danger-bg-alt: rgba(220, 38, 38, 0.24);
+  --danger-text: #f87171;
+  --danger-border: rgba(248, 113, 113, 0.35);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--disabled); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
